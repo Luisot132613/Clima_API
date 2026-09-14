@@ -20,6 +20,6 @@ jobs:
 
       # Passo 3: Executar o app usando o Secret
       - name: Executar app com chave secreta
-        run: node index.js
+        run: node script.js
         env:
           API_KEY: ${{ secrets.API_KEY }}
