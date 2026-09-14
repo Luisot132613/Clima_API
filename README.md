@@ -9,13 +9,15 @@ Este projeto foi desenvolvido em **JavaScript** e serve como base para estudos d
 - Consulta de dados meteorológicos em tempo real.
 - Exibição de temperatura, condições climáticas e horário.
 - Interface simples e responsiva.
-- Uso de variáveis de ambiente para proteger a chave da API.
 
 ---
 
 ## 🚀 Tecnologias utilizadas
-- **HTML5** → estrutura da página  
-- **CSS3** → estilização  
-- **JavaScript (ES6+)** → lógica e consumo da API  
+- **HTML** → estrutura da página  
+- **CSS** → estilização  
+- **JavaScript** → lógica e consumo da API  
 - **Fetch API** → requisições HTTP  
-- **GitHub Secrets** ou `.env` → ocultar chave da API
+
+---
+
+Clique [aqui](https://luisot132613.github.io/Clima_API/) para acessar a página.
