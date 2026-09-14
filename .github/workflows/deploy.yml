@@ -18,11 +18,7 @@ jobs:
         with:
           node-version: '18'
 
-      # Passo 3: Instalar dependências
-      - name: Instalar dependências
-        run: npm install
-
-      # Passo 4: Executar o app usando o Secret
+      # Passo 3: Executar o app usando o Secret
       - name: Executar app com chave secreta
         run: node index.js
         env:
