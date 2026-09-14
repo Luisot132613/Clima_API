@@ -9,9 +9,10 @@ document. querySelector("#search").addEventListener('submit', async (event) => {
         return
     }
 
-    const apiKey = 'aeafd859a594cca098c575dbbedbecca';
+    const apiKey = process.env.API_KEY;
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityName)}&appid=${apiKey}&units=metric&lang=pt_br`;
 
+    console.log("Usando chave segura:", apiKey);
     const result = await fetch(apiURL);
     const json = await result.json();
 
