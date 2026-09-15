@@ -12,13 +12,14 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100dvh;
-    background: linear-gradient(#3b82f6, #4a7dff);
+    background: linear-gradient(#4a4b4d, #262729);
 }
+
 
 #container {
     background-color: #f0f8ff;
     border-radius: 20px;
-    padding: 18px;
+    padding: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -60,7 +61,7 @@ body {
 #weather #Tittle {
     text-align: center;
     margin-bottom: 20px;
-    font_weight: 600;
+    font-weight: 600;
     color: #372f3f
 }
 
@@ -149,10 +150,8 @@ body {
 #time {
     font-weight: bold;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 40px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
 }
 
 body.daytime {
