@@ -1,17 +1,26 @@
+// Seelciona o formulário com o id="search" e adiciona um ouvinte de evento para o envio (submit) 
 document. querySelector("#search").addEventListener('submit', async (event) => {
+
+    // Impede que o formulário recarregue a página ao ser enviado
     event.preventDefault();
 
+    // Pega o valor enviado no campo de entrada com o id="city"
     const cityName = document.querySelector("#city").value;
 
+    // Verifica se o usuário não digitou nada e dispara um alerta "Você precisa digitar uma cidade"
     if (!cityName) {
         document.querySelector("#weather").classList.remove('show');
         showAlert("Você precisa digitar uma cidade");
         return
     }
 
+    // Pega o valor da API Key indidual gerada no site para fins educativos
     const apiKey = "aeafd859a594cca098c575dbbedbecca";
+
+    // Pega a URL do site para acessar a API individual do usuário
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityName)}&appid=${apiKey}&units=metric&lang=pt_br`;
 
+    // E
     console.log("Usando chave segura:", apiKey);
     const result = await fetch(apiURL);
     const json = await result.json();

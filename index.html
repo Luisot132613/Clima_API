@@ -3,84 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel="stylesheet" href="./src/style/style.css">
-    <title>Clima_API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"> <!--Conjunto de fontes utilizadas no site-->
+    <link rel="stylesheet" href="./src/style/style.css"> <!--Incluir um .css externo-->
+    <title>Clima_API</title> <!--Titulo do site na pagina do navegador-->
 </head>
 <body>
-    <div id="container">
-        <form id="search">
-            <i class="fa-solid fa-location-dot"></i>
+    <div id="container"> <!--Caixa com as informações do clima-->
+        <form id="search"> <!--Formulario para colocar o texto das cidades-->
+            <i class="fa-solid fa-location-dot"></i> <!--Icone de navegação na barra de pesquisa-->
             <input 
                 type="text"
                 name="city"
                 id="city" 
-                placeholder="Digite uma cidade"
-            >
-            <button type="submit">
-                <i class="fa-brands fa-sistrix"></i>
+                placeholder="Digite uma cidade" 
+            > 
+            <button type="submit"> <!--Botão para iniciar a busca da cidade-->
+                <i class="fa-brands fa-sistrix"></i> <!--Icone de lupa no botão de busca-->
             </button>
         </form>
-        <div id="weather">
-            <h1 id="Tittle">Divinópolis, MG</h1>
-            <div id="infos">
+        <div id="weather"> <!--Caixas com as informações do tempo / Inicialmente são ficticias mas depois são buscadas pela API-->
+            <h1 id="Tittle">Divinópolis, MG</h1> <!--Titulo da cidade buscada-->
+            <div id="infos"> <!--Informação e icone do clima correspondente da cidade-->
                 <div id="temp">
-                    <img id="temp_img" src="http://openweathermap.org/img/wn/04d@2x.png" alt="Icone do clima">
+                    <img id="temp_img" src="http://openweathermap.org/img/wn/04d@2x.png" alt="Icone do clima"> <!--Imagem do clima do OperWeather-->
                     <div>
-                    <p id="temp_value">
+                    <p id="temp_value"> <!--Valor em graus da temperatura ambiente-->
                         32<sup>°C</sup>
                     </p>
-                    <p id="temp_description">Ensolarado</p>    
+                    <p id="temp_description">Ensolarado</p> <!--Descrição caracteristica do clima-->
                 </div>
             </div>
                 
-            <div id="other_infos">
+            <div id="other_infos"> <!--Caixa com outras informações relevantes-->
                 <div class="info">
-                    <i id="temp_max_icon" class="fa-solid fa-temperature-high"></i>
+                    <i id="temp_max_icon" class="fa-solid fa-temperature-high"></i> <!--Icone de temperatura máxima-->
                     <div>
-                        <h2>Temp. max</h2>
+                        <h2>Temp. max</h2> <!--Titulo do icone-->
                         <p id="temp_max">
-                            32<sup>°C</sup>
+                            32<sup>°C</sup> <!--Temperatura máxima da cidade-->
                         </p>
                     </div>
                 </div>
                 <div class="info">
-                    <i id="temp_min_icon" class="fa-solid fa-temperature-low"></i>
+                    <i id="temp_min_icon" class="fa-solid fa-temperature-low"></i> <!--Icone de temperatura mínima-->
                     <div>
-                        <h2>Temp. min</h2>
+                        <h2>Temp. min</h2> <!--Titulo do icone-->
                         <p id="temp_min">
-                            20<sup>°C</sup>
+                            20<sup>°C</sup> <!--Temperatura mínima da cidade-->
                         </p>
                     </div>
                 </div>
                 <div class="info">
-                    <i id="humidity_icon" class="fa-solid fa-tint"></i>
+                    <i id="humidity_icon" class="fa-solid fa-tint"></i> <!--Icone de humidade-->
                     <div>
-                        <h2>Humidade</h2>
+                        <h2>Humidade</h2> <!--Titulo do icone-->
                         <p id="humidity">
-                            50%
-                        </p>
+                            50% 
+                        </p> <!--Humidade da cidade em porcentagem-->
                     </div>
                 </div>
                     <div class="info">
-                    <i id="wind_icon" class="fa-solid fa-wind"></i>
+                    <i id="wind_icon" class="fa-solid fa-wind"></i> <!--Icone da velocidade dos ventos-->
                     <div>
-                        <h2>Ventos</h2>
+                        <h2>Ventos</h2> <!--Titulo do icone-->
                         <p id="wind">
                             50  km/h
-                        </p>
+                        </p> <!--Velocidade dos ventos da cidade em Km/h-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <div id="time">
+        <div id="time"> <!--Mensagem com a data e o tempo que foi buscado a informação da cidade-->
             
         </div>
-        <div id="alert">
+        <div id="alert"> <!--Mensagem de alerta para informar se a cidade não foi encontrada ou não exista-->
 
         </div>
     </div>
-    <script src= "./src/javascript/script.js"></script>
+    <script src= "./src/javascript/script.js"></script> <!--JavaScript para obter as informações da API em pasta externa-->
 </body>
 </html>
