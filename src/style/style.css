@@ -1,66 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&display=swap');
 
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;  /*Fonte utilizada no site*/
+    margin: 0;                           /*Sem margiem nas linhas*/
+    padding: 0;                          /*Sem borda de elementos entre os conteudos*/
+    box-sizing: border-box;              /*Ajusta o conteudo dentro da box*/
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100dvh;
+    display: flex;                      /*Tamaho de item relativo ao outros itens dentro do body*/
+    align-items: center;                /*Justifica de forma flexivel itens do body na horizontal*/
+    justify-content: center;            /*Alinha itens dentro do body*/
+    min-height: 100dvh;                 /*Tamanho mínimo da tela "dvh" utilizado p/ ajustar tela mobile*/
     background: linear-gradient(#4a4b4d, #262729);
 }
 
 
 #container {
     background-color: #f0f8ff;
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 20px;                /*Arredondar os 4 cantos do container*/
+    padding: 10px;                      /*Borda interna do corpo do site*/
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 #search {
-    display: flex;
+    display: flex;                      
     align-items: center;
-    gap: 8px;
-    border: 1px solid #bdbdbd;
+    gap: 8px;                           /*Espaço entre ícones e texto*/
+    border: 1px solid #bdbdbd;        /*Borda entre o texto*/
     border-radius: 10px;
     padding: 4px 12px;
 }
 
 #search input {
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
+    border: none;                       /*Sem borda entre o input*/
+    background-color: transparent;      /*Caixa do input transparente*/
+    font-size: 16px;                    /*Tamanho da fonte*/
     width: 100%;
 }
 
-#search input focus-visible {
+#search input focus-visible {           /*Remove o contorno padrão (outline) quando o input dentro do #search fica visivel*/
     outline: none;
 }
 
 #search button {
     background-color: transparent;
     border: none;
-    cursor: pointer;
+    cursor: pointer;                    /*Tipo de cursor quando colocado o mouse no botão*/
 }
 
 #weather {
-    display: none;
+    display: none;                      /*Não aparece o display do #weather no padrão de seleção*/
     margin-top: 20px;
 }
 
-#weather.show {
+#weather.show {                         /*Aarece o display do #weather em formato de bloco, ao receber a classe #show*/
     display: block;
 }
 
 #weather #Tittle {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px;                /*Margem inferior entre o elemento abaixo*/
     font-weight: 600;
     color: #372f3f
 }
@@ -68,33 +68,33 @@ body {
 #temp {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;      /*Espaço igual é distribuído ao redor de cada item*/
     gap: 20px;
     background: linear-gradient(90deg, #5a7cdc, #606dde);
-    color: #fff;
+    color: #fff;                        
     border-radius: 20px;
 }
 
 #temp_img {
-    filter: drop-shadow(2px, 2px, 2px, rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(2px, 2px, 2px, rgba(0, 0, 0, 0.2)); /*Aplica efeito de sombra projetada no elemento*/
 }
 
 #temp_value {
-    font-weight: bold;
+    font-weight: bold;          /*Fonte em negrito*/
     font-size: 50px;
     line-height: 55px;
 }
 
 #temp_description {
     font-weight: 500;
-    text-transform: capitalize;
+    text-transform: capitalize;     /*Padroniza a fonte com a primeira letra maiuscula*/
     margin-bottom: 10px;
 }
 
 #other_infos {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;               /*Margem superior entre o elemento acima*/
+    display: grid;                  /*Tamanho dos item em grades iguais*/
+    grid-template-columns: 1fr 1fr; /*2 colunas ocupando metade do espaço*/
     gap: 12px;
 }
 

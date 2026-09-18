@@ -84,7 +84,7 @@ function showinfo(json) {
     document.querySelector("#temp_description").innerHTML = `${json.temp_description}`;
 
     // Exibe a imagem correspondente ao clima da cidade
-    document.querySelector("#temp_img").setAttribute('src', `https://openweathermap.org/img/wn/${json.icon}.png`);
+    document.querySelector("#temp_img").setAttribute('src', `https://openweathermap.org/img/wn/${json.icon}@2x.png`);
 
     // Exibe a humidade correspondente em porcentagem
     document.querySelector("#humidity").innerHTML = `${json.humidity}%`;
