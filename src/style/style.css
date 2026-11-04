@@ -23,6 +23,7 @@
     height: 40px;
     vertical-align: middle;
     margin-bottom: 20px;
+    gap: 8px;
 }
 
 #siteTitle span {
