@@ -21,9 +21,8 @@
 #siteTitle img {
     width: 40px;
     height: 40px;
-    vertical-align: middle;
-    margin-bottom: 20px;
-    gap: 8px;
+    margin-bottom: 0px;
+    object-fit: contain;
 }
 
 #siteTitle span {
