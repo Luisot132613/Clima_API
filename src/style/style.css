@@ -26,7 +26,7 @@
 }
 
 #siteTitle span {
-    line-height: 1;
+    display: inline-block;
 }
 
 .hidden {
