@@ -7,6 +7,27 @@
     box-sizing: border-box;              /*Ajusta o conteudo dentro da box*/
 }
 
+#siteTitle{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#siteTitle img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.hidden {
+    display: none;
+}
+
 body {
     display: flex;                      /*Tamaho de item relativo ao outros itens dentro do body*/
     align-items: center;                /*Justifica de forma flexivel itens do body na horizontal*/

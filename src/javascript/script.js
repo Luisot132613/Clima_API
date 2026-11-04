@@ -10,8 +10,9 @@ document. querySelector("#search").addEventListener('submit', async (event) => {
     // Verifica se o usuário não digitou nada e dispara um alerta "Você precisa digitar uma cidade"
     if (!cityName) {
         document.querySelector("#weather").classList.remove('show');
+        resetTitle();
         showAlert("Você precisa digitar uma cidade");
-        return
+    return;
     }
 
     // Pega o valor da API Key indidual gerada no site para fins educativos
@@ -52,6 +53,8 @@ document. querySelector("#search").addEventListener('submit', async (event) => {
         // Remove a classe "show" da seleção do clima, escondendo-a
         document.querySelector("#weather").classList.remove('show');
 
+        resetTitle();
+
         // Dispara alerta "erro 404" e uma imagem ilustrativa informando o erro
     showAlert(`
         Error 404 - Cidade não encontrada
@@ -64,6 +67,12 @@ document. querySelector("#search").addEventListener('submit', async (event) => {
 function showinfo(json) {
     //Limpa qualquer alerta anterior
     showAlert("");
+
+    // Exibe o título
+    document.querySelector("#weather").classList.add('show');
+
+    // Esconde o título
+    //document.querySelector("#siteTitle").classList.add("hidden");
 
     // Mostra a seção de clima adicionando a classe "show"
     document.querySelector("#weather").classList.add('show');
@@ -102,6 +111,7 @@ function showinfo(json) {
 
     // Obtem a hora local em UTC
     const hour = localTime.getUTCHours();
+    updateTitle(hour, json.icon);
     const body = document.body;
 
     // Se o horario da cidade for entre 06HRS a 18HRS -> mostra um background claro, se não mostra um background escuro
@@ -112,6 +122,36 @@ function showinfo(json) {
         body.classList.remove("daytime");
         body.classList.add("nighttime");
     }
+
+}
+
+function updateTitle(hour, icon) {
+    const title = document.querySelector("#siteTitle");
+
+    const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
+
+    if (hour >= 6 && hour < 12) {
+        title.innerHTML = `
+            <img src="${iconUrl}" alt="Clima">
+            <span>Comece bem o dia</span>
+        `;
+    } else if (hour >= 12 && hour < 18) {
+        title.innerHTML = `
+            <img src="${iconUrl}" alt="Clima">
+            <span>Aproveite a tarde</span>
+        `;
+    } else {
+        title.innerHTML = `
+            <img src="${iconUrl}" alt="Clima">
+            <span>Tenha uma ótima noite</span>
+        `;
+    }
+}
+
+function resetTitle() {
+    document.querySelector("#siteTitle").innerHTML =
+        "🌦️ Clima API";
+    document.querySelector("#city").value = "";
 }
 
 // Função responsável por enviar uma mensagem de alerta na página
